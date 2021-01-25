@@ -25,7 +25,7 @@ app.prepare().then(() => {
         createShopifyAuth({
             apiKey: SHOPIFY_API_KEY,
             secret: SHOPIFY_API_SECRET_KEY,
-            scopes: ['read_products'],
+            scopes: ['read_products', 'write_products'],
             afterAuth(ctx) {
                 const urlParams = new URLSearchParams(ctx.request.url);
                 const shop = urlParams.get('shop');
